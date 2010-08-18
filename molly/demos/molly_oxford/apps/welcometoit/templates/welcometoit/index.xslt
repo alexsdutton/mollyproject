@@ -113,43 +113,25 @@ xmlns:molly="http://mollyproject.org/xpath#">
 </xsl:template>
 
 <xsl:template match="div[@id='map']">
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAXWaYpACABYqQEjTJ7Xh76RQRDGKfPCBPJx7V3XOgbmepBWFGzRQ2l9HRmkLXUwGWT5ZZS4ZWjBM9hQ" type="text/javascript"></script><script type="text/javascript"> //
-
-    function load() {
-      if (GBrowserIsCompatible()) {
-
-    var CustomGetTileUrl = function(a,b){
-
-       return 'http://a.tile.openstreetmap.org/'+b+'/'+a.x+'/'+a.y+'.png';
-    
+  <script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+  </script>
+  <script type="text/javascript">
+  $(function() {
+    var myLatlng = new google.maps.LatLng(51.760053,-1.2604);
+    var myOptions = {
+      zoom: 14,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-
-    var copyright = new GCopyright(1, new GLatLngBounds(new GLatLng(53.8136257,-3.0981445),
-						    new GLatLng(53.8654855,-2.9663944) ),
-			       17, "");
-
-			    
-    var copyrightCollection = new GCopyrightCollection('');
-    copyrightCollection.addCopyright(copyright);
-
-    var tilelayers = [new GTileLayer(copyrightCollection,1,17)];
-    tilelayers[0].getTileUrl = CustomGetTileUrl;
-    var osmmap = new GMapType(tilelayers, G_SATELLITE_MAP.getProjection(), "OSM");
-
-
-        var map = new GMap2(document.getElementById("map"));
-        map.addControl(new GSmallMapControl());
-         map.setCenter(new GLatLng(51.760053,-1.2604), 15);
-	var point = new GLatLng(51.760053,-1.2604);
-	map.addOverlay(new GMarker(point,{title:"OUCS"}));
-	map.addMapType(osmmap);
-	map.setMapType(osmmap);
-      }
-    }
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
     
-    $(load);
-
-    //
+    var marker = new google.maps.Marker({
+        position: myLatlng, 
+        map: map,
+        title:"Oxford University Computing Services"
+    });   
+  })
   	</script>
   	<div id="map" style="width: 100%; height: 300px; position: relative; background-color: rgb(229, 227, 223);"/>
 </xsl:template>
