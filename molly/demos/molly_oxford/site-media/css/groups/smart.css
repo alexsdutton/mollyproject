@@ -151,6 +151,7 @@ li#menu-library {background-image:url('../../png/index-icons/library.png');}
 li#menu-weather {background-image:url('../../png/index-icons/weather.png');}
 li#menu-weblearn {background-image:url('../../png/index-icons/weblearn.png');}
 li#menu-service_status {background-image:url('../../png/index-icons/service_status.png');}
+li#menu-welcometoit {background-image:url('../../png/index-icons/welcometoit.png');}
 /* End Index Page Specific */
 
 /* Breadcrumb Trail Styles */
@@ -222,6 +223,7 @@ div#bc-title h1.weather-header {  background-image:url('../../png/index-icons/we
 div#bc-title h1.service_status-header {  background-image:url('../../png/index-icons/service_status-bc.png');}
 div#bc-title h1.weblearn-header {  background-image:url('../../png/index-icons/weblearn-bc.png');}
 div#bc-title h1.feature_vote-header {  background-image:url('../../png/index-icons/feature_vote-bc.png');}
+div#bc-title h1.welcometoit-header {  background-image:url('../../png/index-icons/welcometoit-bc.png');}
 /* End Breadcrumb Trail Styles */
 
 
@@ -297,7 +299,7 @@ ul.link-list li a, ol.search-results li a {
     background-repeat: no-repeat;
     background-image:url('../../png/icons/list-arrow.png'); /* Default background image */
 }
-ul li span {
+ul.link-list li span, ul.content-list li span {
     background-position: left;
     background-repeat: no-repeat;
     display:block;
@@ -481,6 +483,12 @@ div.section-content {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     
+}
+
+div.section-content h3 {
+    text-align: left;
+    color: #002147;
+    padding-left:0;
 }
 
 /* Help Bubble */
