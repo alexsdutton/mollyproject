@@ -248,7 +248,7 @@ APPLICATIONS = [
 
     Application('molly.stats', 'stats', 'Statistics'),
 
-    Application('molly_oxford.apps.welcometoit', 'welcometoit', 'Welcome to IT'),
+    Application('molly_oxford.apps.welcometoit', 'welcometoit', 'Guide to IT at Oxford'),
 
     Application('molly.apps.url_shortener', 'url_shortener', 'URL Shortener',
         display_to_user = False,

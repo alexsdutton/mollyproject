@@ -23,7 +23,7 @@ class IndexView(BaseView):
 
         if not section:
             title = 'Welcome to IT'
-        if context['subsection'] != subsection:
+        elif context['subsection'] != subsection:
             title = {
                 'unwelcome': 'Online Security',
                 'bringing': 'Bringing Your Own Computer?',
