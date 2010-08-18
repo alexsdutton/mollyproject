@@ -166,7 +166,7 @@ APPLICATIONS = [
         ]
     ),
 
-    Application('molly.apps.webcams', 'webcams', 'Webcams'),
+    Application('molly_oxford.apps.welcometoit', 'welcometoit', 'Guide to IT at Oxford'),
 
     Application('molly_oxford.apps.results', 'results', 'Results releases'),
 
@@ -203,6 +203,8 @@ APPLICATIONS = [
         query_expansion_file = os.path.join(project_root, 'data', 'query_expansion.txt'),
         display_to_user = False,
     ),
+
+    Application('molly.apps.webcams', 'webcams', 'Webcams'),
 
     Application('molly.apps.feeds', 'feeds', 'Feeds',
         providers = [
@@ -247,8 +249,6 @@ APPLICATIONS = [
     ),
 
     Application('molly.stats', 'stats', 'Statistics'),
-
-    Application('molly_oxford.apps.welcometoit', 'welcometoit', 'Guide to IT at Oxford'),
 
     Application('molly.apps.url_shortener', 'url_shortener', 'URL Shortener',
         display_to_user = False,
