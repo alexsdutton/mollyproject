@@ -3,16 +3,20 @@
 {% if entity|osm_tags or entity.metadata.osm.tags.phone or entity.metadata.osm.tags.wikipedia or entity.metadata.osm.tags.url %}
 
 <div class="section">
-  <h2>Information from OpenStreetMap</h2>
+  <div class="header">
+    <h2>Information from OpenStreetMap</h2>
+  </div>
 {% if entity|osm_tags %}
-  <div class="article"><div class="bubble pad-5">
-    <dl>
+  <table class="content no-round-bottom">
+    <tbody>
 {% for k,v in entity|osm_tags %}
-      <dt>{{ k|capfirst }}:</dt>
-      <dd>{{ v }}</dd>
+      <tr>
+        <td>{{ k|capfirst }}:</th>
+        <td>{{ v }}</td>
+      </tr>
 {% endfor %}
-    </dl>
-  </div></div>
+    </tbody>
+  </table>
 {% endif %}
 
 <ul class="link-list">

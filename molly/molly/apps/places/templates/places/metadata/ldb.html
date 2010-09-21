@@ -1,33 +1,59 @@
 {% load molly_utils %}{% if entity.metadata.ldb %}
-
-  <h2>Live departure board - {{ entity.metadata.ldb.generatedAt|date:"G:i:s" }}</h2>
-<div class="pad-5">
+<div class="section">
+  <div class="header">
+    <h2>Upcoming train departures</h2>
+  </div>
+  
+  {% if entity.metadata.ldb.nrccMessages.message %}
+  <ul class="content-list no-round-bottom">
     {% for message in entity.metadata.ldb.nrccMessages.message %}
-      <div class="bubble pad-10">
-      {{ message|sanitize_html }}
-      </div>
+      <li>{{ message|sanitize_html }}</li>
     {% endfor %}
-<table class="real-time-information">
+  </ul>
+  {% endif %}
+
+  <table class="content">
     <thead>
-        <tr>
-            <th>Destination</th>
-            <th>Plat.</th>
-            <th>Due</th>
-            <th>Expected</th>
-        </tr>
+      <tr>
+        <th>Destination</th>
+        <th>Plat.</th>
+        <th>Due</th>
+        <th>Expected</th>
+      </tr>
     </thead>
-    <tbody id="bus_times">
-    {% for service in entity.metadata.ldb.trainServices.service %}
+    <tbody>
+      {% if entity.metadata.ldb.error %}
         <tr>
-            <td>{{ service.destination.location.0.locationName }}{% if service.destination.location.0.via %}<br/>
-            <small>{{ service.destination.location.0.via }}</small>{% endif %}</td>
+          <td colspan="4">
+            <p>
+              There is currently a problem retrieving live departure information from the National Rail web site.
+            </p>
+            <p>
+              Departure information may still be accessed
+              <a href="http://pda.ojp.nationalrail.co.uk/en/pj/ldbboard/dep/{{ train_station.identifiers.crs }}">directly
+              from their web site</a>.
+            </p>
+          </td>
+        </tr>
+      {% else %}
+        {% for service in entity.metadata.ldb.trainServices.service %}
+          <tr>
+            <td>
+              {{ service.destination.location.0.locationName }}{% if service.destination.location.0.via %}<br/>
+              <small>{{ service.destination.location.0.via }}</small>{% endif %}
+            </td>
             <td>{{ service.platform }}</td>
             <td>{{ service.std }}</td>
             <td>{{ service.etd }}</td>
-        </tr>
-    {% endfor %}
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="4">There are currently no scheduled departures.</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
     </tbody>
-</table>
+  </table>
+        
 </div>
-
 {% endif %}
