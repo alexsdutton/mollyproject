@@ -1,5 +1,6 @@
-{% load portal_misc %}    
+{% load portal_misc %}{% spaceless %}
 
+<li class="contact-person">
 {% ifequal medium "email" %}
   <a class="email" href="mailto:{{ person.mail.0 }}">
 {% else %}
@@ -16,3 +17,5 @@
       {% endifequal %}
     </small>
   </a>
+</li>
+{% endspaceless %}

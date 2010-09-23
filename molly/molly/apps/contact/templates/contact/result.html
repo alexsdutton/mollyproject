@@ -1,5 +1,6 @@
 {% load portal_misc %}
 
+<li class="contact-person">
 <h3 class="contact-cn">{% if person.id %}
     <a href="{% url contact:result_detail person.id %}">{{ person.cn }}</a>
   {% else %}
@@ -28,4 +29,4 @@
     </p>
   {% endfor %}
 </div>
-
+</li>
