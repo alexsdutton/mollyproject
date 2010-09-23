@@ -1,0 +1,9 @@
+div.contact-pagination-controls {
+    text-align:center;
+    font-size:14pt;
+    padding:5px;
+}
+
+div.contact-pagination-controls a {
+    padding:5px 10px;
+}
