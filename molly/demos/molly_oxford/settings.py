@@ -398,7 +398,7 @@ COMPRESS_CSSTIDY_SETTINGS = {
 
 COMPRESS_JS_FILTERS = ('compress.filters.jsmin.JSMinFilter',)
 # On or off?
-COMPRESS = True
+COMPRESS = not DEBUG
 COMPRESS_VERSION = True
 
 CACHE_DIR = '/var/cache/molly'
