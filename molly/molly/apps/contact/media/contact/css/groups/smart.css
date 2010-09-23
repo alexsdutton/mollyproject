@@ -1,3 +1,6 @@
+li#menu-contact {background-image:url('../../../site/png/index-icons/contact.png');}
+div#bc-title h1.contact-header {  background-image:url('../../../site/png/index-icons/contact-bc.png');}
+
 div.contact-pagination-controls {
     text-align:center;
     font-size:14pt;
@@ -6,4 +9,12 @@ div.contact-pagination-controls {
 
 div.contact-pagination-controls a {
     padding:5px 10px;
+}
+
+a.contact-pagination-more {
+    display:block;
+}
+
+div.contact-section {
+    background-color: #CFCFCF;
 }

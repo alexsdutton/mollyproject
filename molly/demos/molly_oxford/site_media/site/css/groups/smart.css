@@ -83,7 +83,7 @@ ol.icon-menu li a {
     text-decoration:none;
     color: #002147;
 }
-li#menu-contact {background-image:url('../../../site/png/index-icons/contact.png');}
+
 li#menu-places {background-image:url('../../../site/png/index-icons/places.png');}
 li#menu-podcasts {background-image:url('../../../site/png/index-icons/podcasts.png');}
 li#menu-webcams {background-image:url('../../../site/png/index-icons/webcams.png');}
@@ -155,7 +155,6 @@ div#bc-title h1.with-icon {
     padding-left: 34px; /* Moves text to allow background breadcrumb image to coexist */
 }
 div#bc-title h1.places-header {     background-image:url('../../../site/png/index-icons/places-bc.png');}
-div#bc-title h1.contact-header {  background-image:url('../../../site/png/index-icons/contact-bc.png');}
 div#bc-title h1.webcams-header {  background-image:url('../../../site/png/index-icons/webcams-bc.png');}
 div#bc-title h1.podcasts-header { background-image:url('../../../site/png/index-icons/podcasts-bc.png');}
 div#bc-title h1.results-header {  background-image:url('../../../site/png/index-icons/results-bc.png');}
@@ -178,8 +177,6 @@ ul.content-list, ul.link-list, ol.search-results {
     border-left: 1px solid rgba(255, 255, 255, 0.33);
     list-style: none;
     padding: 0; margin: 0;
-    -webkit-border-bottom-left-radius: 8px; -moz-border-radius-bottomleft: 8px; border-bottom-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;    -moz-border-radius-bottomright: 8px;    border-bottom-right-radius: 8px;
 }
 
 ul.content-list {
@@ -650,24 +647,7 @@ ul.content-list li.superuser-comment {
 */
 
 /* div.section is now 'legacy' - it should be replaced by div.section and one of the above */
-div.section {
-    background:#B88C54 url('../../../site/png/new/gradients/gradient-50-nrWhite-Transparent.png') repeat-x;
-    margin:10px;
-    -webkit-border-radius:8px; -moz-border-radius: 8px; border-radius: 8px;
-    -moz-box-shadow: 2px 2px 2px #333; -webkit-box-shadow: 2px 2px 2px #333; box-shadow: 2px 2px 2px #333;
-}
 
-div.header {
-    color:#222;
-    padding:5px;
-    border-top:1px solid rgba(255, 255, 255, 0.33);
-    border-left:1px solid rgba(255, 255, 255, 0.33);
-	background:#dfdfdf;
-    background:-moz-linear-gradient(top, #fff, #cfcfcf);
-    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#dfdfdf));
-    -webkit-border-top-right-radius:5px;-moz-border-radius-topright: 5px; border-top-right-radius: 5px;
-    -webkit-border-top-left-radius:5px; -moz-border-radius-topleft: 5px;  border-top-left-radius: 5px;
-}
 
 div.header h2 {
     color: rgb(34, 34, 34);
@@ -682,12 +662,6 @@ div.header + ul.content-list, div.header + form, div.header + div.section-conten
     border-top: 1px solid rgb(152, 161, 172);
 }
 
-div.section-content {
-    padding:8px;
-    background-color: #DFDFDF;
-    -webkit-border-bottom-left-radius: 8px;    -moz-border-radius-bottomleft: 8px;     border-bottom-left-radius: 8px;
-    -webkit-border-bottom-right-radius: 8px;    -moz-border-radius-bottomright: 8px;     border-bottom-right-radius: 8px;
-}
 /* End Section Formatting */
 
 
@@ -799,10 +773,7 @@ div.button > a {
 }
 
 
-a img {
-  border:0;
-}
-
 small {
   font-size:90%;
 }
+

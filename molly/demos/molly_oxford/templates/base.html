@@ -11,6 +11,7 @@
         var require_location = {{ require_location|yesno:"true,false" }};
         var base = "{% url home:index %}";
         var positionName = {% if geolocation.name %}"{{ geolocation.name|escapejs }}"{% else %}null{% endif %};
+        var media_url = "{{ MEDIA_URL|escapejs }}";
     </script>
 {% endif %}
 
@@ -76,7 +77,7 @@
 
 {% endblock %}
 
-<div class="content">
+<div class="main-content">
 
 {% if unread_user_messages %}
     <div class="section" style="padding:10px;">
