@@ -1,0 +1,131 @@
+div.section {
+    margin:10px;
+    -moz-box-shadow: 2px 2px 2px #333; -webkit-box-shadow: 2px 2px 2px #333; box-shadow: 2px 2px 2px #333;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+
+.content {
+    padding:8px;
+    background-color: #DFDFDF;
+    border-top:1px solid #98a1ac;
+    border-bottom: 1px solid #888;
+}
+
+div.notice {
+}
+
+div.header {
+    color:#222;
+    padding:5px;
+    border-top:1px solid rgba(255, 255, 255, 0.33);
+    border-left:1px solid rgba(255, 255, 255, 0.33);
+	background:#dfdfdf;
+    background:-moz-linear-gradient(top, #fff, #cfcfcf);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#dfdfdf));
+}
+
+.round {
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+.first {
+    -webkit-border-top-left-radius: 5px; -moz-border-radius-topleft: 5px; border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;    -moz-border-radius-topright: 5px;    border-top-right-radius: 5px;
+    border-top:0;
+}
+.last {
+    -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;    -moz-border-radius-bottomright: 5px;    border-bottom-right-radius: 5px;
+    border-bottom:0;
+}
+
+a img {
+  border:0;
+}
+
+li.page-start {
+  background-color:red;
+}
+
+form.content {
+    padding: 10px;
+
+    background: #dfdfdf;
+    background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#dfdfdf));
+    background:-moz-linear-gradient(top, #eee, #dfdfdf);
+    background:linear-gradient(top, #eee, #dfdfdf);
+
+    color: #333;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+form.content dl {
+    padding-top:4px;
+}
+
+form.content dl dt, form.section dl dd {
+    padding:0 8px;
+    margin-left:0;
+}
+
+form.content dl dd {
+    padding-bottom: 8px;
+}
+
+form.content dl input[type=text], form.content dl textarea {
+    width:100%;
+    height:24px;
+    border:0;
+    padding: 2px 0 2px 2px;
+    margin: 0;
+    font-size: 16px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    font-family: "Liberation Sans", Arial, sans-serif;
+    border:1px solid #888;
+}
+
+form.content dl textarea {height: 5em;}
+
+form.content ul.errorlist + input , form.content ul.errorlist + textarea {
+    background-color: #f7d9d9;
+}
+
+form.content dl dt {
+    font-size: 1.2em;
+    color: #333;
+    text-shadow: 1px 1px 1px #aaa;
+    margin-top:4px;
+}
+
+form.content dl ul.errorlist {
+    list-style:none;
+    padding:4px;
+    margin:0 0 0 0;
+    color:#301010;
+}
+
+form.content p.help-bubble {
+    margin-right: 138px;
+    margin-left:8px;
+}
+
+form.content p.submit-buttons {
+    display:block;
+    float:right;
+    width:120px;
+    margin:0;
+    padding:8px;
+    padding-top:0;
+}
+
+form.content p.submit-buttons input {
+    height: 30px;
+    margin-top: 8px;
+    font-size: 1.2em;
+    width:100%;
+}
+
+form.content p.submit-buttons input:first-child {
+    margin-top:0;
+}
